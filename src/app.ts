@@ -55,6 +55,7 @@ router.use(function (err: any, req: any, res: any, next: any) {
     if (err instanceof HttpError) {
         return err.sendError(res);
     } else {
+        console.log(err)
         return res.status(500).json({
             error: {
                 title: 'general_error',
